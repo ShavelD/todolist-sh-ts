@@ -42,13 +42,14 @@ export const TodolistsList: React.FC<PropsType> = ({demo = false}) => {
 
 
     useEffect(() => {
+        debugger
         if (demo || !isLoggedIn) {
             return
         }
         fetchTodolistsTC()
     }, [])
 
-
+    debugger
     if (!isLoggedIn) {
         return <Redirect to={'/login'}/>
     }
